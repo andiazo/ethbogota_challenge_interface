@@ -31,7 +31,8 @@ export default function index(props) {
           {props.title}
         </h1>
       <div>
-        <Track data={data} /> 
+       {data ? (<Track data={data} />) : (<div>No hay data</div>)}
+         
       </div>
     </main>
     </>
