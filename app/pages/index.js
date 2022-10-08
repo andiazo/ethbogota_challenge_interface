@@ -3,6 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import styles from '../styles/Home.module.css';
 import { Player } from '@livepeer/react';
+import { Button } from "@material-tailwind/react";
 
 const playbackId = '87b5b3urybkhinp5';
 
@@ -19,9 +20,8 @@ export default function Home() {
 				<h1 className={styles.title}>
 					Bienvenid@ a <a href="/">ABCrypto</a>
 				</h1>
-
-				<div className={styles.videocard}>
-					<Player
+				<div className={styles.videocard}>		
+					 <Player
 						title="Waterfalls"
 						playbackId={playbackId}
 						autoPlay
@@ -46,7 +46,7 @@ export default function Home() {
 				</div>
 
 				<div className={styles.grid}>
-					<Link href="/feed">
+					<Link href="/feed?track=0">
 						<div className={styles.card}>
 							<h2>ABC Básico &rarr;</h2>
 							<p>Find in-depth information about Next.js features and API.</p>

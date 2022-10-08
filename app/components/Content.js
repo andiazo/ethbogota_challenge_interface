@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import InfiniteScroll from "react-infinite-scroll-component";
 
+import styles from '../styles/Home.module.css';
+
 const Content = ({ data }) => {
   const [posts, setPosts] = useState(data);
   const [hasMore, setHasMore] = useState(true);
@@ -24,15 +26,30 @@ const Content = ({ data }) => {
       >
         {posts.map((data) => (
           <div key={data.id}>
-          <video width="320" height="240" controls>
-            <source src="movie.mp4" type="video/mp4"/>
-            <source src="movie.ogg" type="video/ogg"/>
-            Your browser does not support the video tag.
-          </video>
-            <div className="back">
-              <strong> {data.id}</strong> {data.title}
-            </div>
-            {data.completed}
+          <div className={styles.videocard}>
+          <Player
+						title="Waterfalls"
+						playbackId={data.playbackId}
+						autoPlay
+						muted
+						showTitle={false}
+						aspectRatio="16to9"
+						// poster={<PosterImage />}
+						controls={{
+							autohide: 3000,
+						}}
+						theme={{
+							borderStyles: { containerBorderStyle: 'hidden' },
+							radii: { containerBorderRadius: '10px' },
+						}}
+						media={{
+							sm: '(max-width: 5vw)',
+							md: '(max-width: 8vw)',
+							lg: '(max-width: 10vw)',
+						}}
+						objectFit='contain'
+					/>
+          </div>
           </div>
         ))}
       </InfiniteScroll>
