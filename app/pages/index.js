@@ -4,7 +4,7 @@ import Link from 'next/link';
 import styles from '../styles/Home.module.css';
 import { Player } from '@livepeer/react';
 
-const playbackId = "87b5b3urybkhinp5"
+const playbackId = '87b5b3urybkhinp5';
 
 export default function Home() {
 	return (
@@ -20,26 +20,30 @@ export default function Home() {
 					Bienvenid@ a <a href="/">ABCrypto</a>
 				</h1>
 
-        <div>
-
-        <Player
-        title="Waterfalls"
-        playbackId={playbackId}
-        autoPlay
-        muted
-        showTitle={false}
-        aspectRatio="16to9"
-        // poster={<PosterImage />}
-        controls={{
-          autohide: 3000,
-        }}
-        theme={{
-          borderStyles: { containerBorderStyle: 'hidden' },
-          radii: { containerBorderRadius: '10px' },
-        }}
-      />
-        
-        </div>
+				<div className={styles.videocard}>
+					<Player
+						title="Waterfalls"
+						playbackId={playbackId}
+						autoPlay
+						muted
+						showTitle={false}
+						aspectRatio="16to9"
+						// poster={<PosterImage />}
+						controls={{
+							autohide: 3000,
+						}}
+						theme={{
+							borderStyles: { containerBorderStyle: 'hidden' },
+							radii: { containerBorderRadius: '10px' },
+						}}
+						media={{
+							sm: '(max-width: 5vw)',
+							md: '(max-width: 8vw)',
+							lg: '(max-width: 10vw)',
+						}}
+						objectFit='contain'
+					/>
+				</div>
 
 				<div className={styles.grid}>
 					<Link href="/feed">
@@ -71,10 +75,13 @@ export default function Home() {
 							Instantly deploy your Next.js site to a public URL with Vercel.
 						</p>
 					</a>
-          <Link href="/team">
+					<Link href="/team">
 						<div className={styles.card}>
 							<h2>Equipo &rarr;</h2>
-							<p>Esta iniciativa fue creada bajo ethbogota, conoce al equipo detrás de ella.</p>
+							<p>
+								Esta iniciativa fue creada bajo ethbogota, conoce al equipo
+								detrás de ella.
+							</p>
 						</div>
 					</Link>
 				</div>
