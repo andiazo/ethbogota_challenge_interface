@@ -73,6 +73,7 @@
   max-width: 800px;
 }
 
+
 .card {
   margin: 1rem;
   padding: 1.5rem;
@@ -83,6 +84,10 @@
   border-radius: 10px;
   transition: color 0.15s ease, border-color 0.15s ease;
   max-width: 300px;
+}
+
+.card:hover {
+  cursor: pointer;
 }
 
 .card:hover,
