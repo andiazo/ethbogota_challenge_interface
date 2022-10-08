@@ -1,4 +1,6 @@
 import React from 'react';
+import { Fragment } from 'react';
+import { Typography } from '@material-tailwind/react';
 
 import { Player } from '@livepeer/react';
 
@@ -10,8 +12,13 @@ export default function Track({ data }) {
 
 	return (
 		<div>
-			{data ? (
-				data.map((datum) => (
+			<Fragment>
+				<Typography variant="h1" color="blue-gray">
+					{data.title}
+				</Typography>
+			</Fragment>
+			{data.data ? (
+				data.data.map((datum) => (
 					<div key={datum.id} className={styles.videocard}>
 						<Player
 							title="Waterfalls"

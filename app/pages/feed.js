@@ -14,9 +14,11 @@ export default function index(props) {
     const dataTrack = [{"track": track,  "playbackId": "87b5b3urybkhinp5"}, {"track": track,  "playbackId": "87b5b3urybkhinp5"}]
     fetch('/api/tracks?id='+track)
       .then((res) => res.json())
-      .then((data) => {console.log("datas: ",data)})
-    setData(dataTrack)
-    console.log(data)
+      .then((data) => {
+        if(data)
+          setData(data)
+          console.log("> data:", data)
+      })
   }, [track]);
   
   useEffect(() => {
@@ -27,12 +29,8 @@ export default function index(props) {
   return (
     <>
     <main className={styles.main}>
-        <h1 className={styles.title}>
-          {props.title}
-        </h1>
       <div>
        {data ? (<Track data={data} />) : (<div>No hay data</div>)}
-         
       </div>
     </main>
     </>
