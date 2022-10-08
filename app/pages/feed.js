@@ -9,7 +9,8 @@ export default function index(props) {
           {props.title}
         </h1>
       <div>
-        <Content data={props.data} />
+        {/**  <Content data={props.data} /> */}
+
       </div>
     </main>
     </>

@@ -2,6 +2,9 @@ import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 import styles from '../styles/Home.module.css';
+import { Player } from '@livepeer/react';
+
+const playbackId = "87b5b3urybkhinp5"
 
 export default function Home() {
 	return (
@@ -16,6 +19,27 @@ export default function Home() {
 				<h1 className={styles.title}>
 					Bienvenid@ a <a href="/">ABCrypto</a>
 				</h1>
+
+        <div>
+
+        <Player
+        title="Waterfalls"
+        playbackId={playbackId}
+        autoPlay
+        muted
+        showTitle={false}
+        aspectRatio="16to9"
+        // poster={<PosterImage />}
+        controls={{
+          autohide: 3000,
+        }}
+        theme={{
+          borderStyles: { containerBorderStyle: 'hidden' },
+          radii: { containerBorderRadius: '10px' },
+        }}
+      />
+        
+        </div>
 
 				<div className={styles.grid}>
 					<Link href="/feed">
