@@ -11,7 +11,7 @@ export default function Track({ data }) {
 	// if (true) return <div></div>
 
 	return (
-		<div>
+		<>
 			<Fragment>
 				<Typography variant="h1" color="blue-gray">
 					{data.title}
@@ -40,13 +40,14 @@ export default function Track({ data }) {
 								md: '(max-width: 8vw)',
 								lg: '(max-width: 10vw)',
 							}}
-							objectFit="contain"
+							objectFit="cover"
+							className={styles.videocard}
 						/>
 					</div>
 				))
 			) : (
 				<div>Sin datos por el momento</div>
 			)}
-		</div>
+		</>
 	);
 }

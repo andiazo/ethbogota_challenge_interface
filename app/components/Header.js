@@ -107,7 +107,6 @@ export default function Header() {
 			</div>
 			<MobileNav open={openNav}>
 				{navList}
-				<SignIn />
 			</MobileNav>
 		</Navbar>
 	);
