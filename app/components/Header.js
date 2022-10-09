@@ -7,6 +7,7 @@ import {
 	Button,
 	IconButton,
 } from '@material-tailwind/react';
+import SignIn from './SignIn';
 
 export default function Header() {
 	const [openNav, setOpenNav] = useState(false);
@@ -65,9 +66,7 @@ export default function Header() {
 					<span>ABCCrypto</span>
 				</Typography>
 				<div className="hidden lg:block">{navList}</div>
-				<Button variant="gradient" size="sm" className="hidden lg:inline-block">
-					<span>Conéctate</span>
-				</Button>
+				<SignIn />
 				<IconButton
 					variant="text"
 					className="ml-auto h-6 w-6 text-inherit hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden"
@@ -108,9 +107,7 @@ export default function Header() {
 			</div>
 			<MobileNav open={openNav}>
 				{navList}
-				<Button variant="gradient" size="sm" fullWidth className="mb-2">
-					<span>Buy Now</span>
-				</Button>
+				<SignIn />
 			</MobileNav>
 		</Navbar>
 	);

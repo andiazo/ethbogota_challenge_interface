@@ -24,7 +24,7 @@ export default function Home() {
 					<Player
 						title="Waterfalls"
 						playbackId={playbackId}
-						autoPlay
+						autoPlay={false}
 						muted
 						showTitle={false}
 						aspectRatio="16to9"
@@ -41,7 +41,7 @@ export default function Home() {
 							md: '(max-width: 8vw)',
 							lg: '(max-width: 10vw)',
 						}}
-						objectFit="contain"
+						objectFit="cover"
 					/>
 				</div>
 
