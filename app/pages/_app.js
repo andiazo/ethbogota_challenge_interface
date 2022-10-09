@@ -52,13 +52,13 @@ function MyApp({ Component, pageProps }) {
         <WagmiConfig client={client}>
             <SessionProvider session={pageProps.session} refetchInterval={0}>
                 <RainbowKitProvider chains={chains}>
-				<ThemeProvider>
-				<LivepeerConfig client={clientStudio} theme={theme}>
-					<Layout>
-						<Component {...pageProps} />
-					</Layout>
-				</LivepeerConfig>
-			</ThemeProvider>
+					<ThemeProvider>
+						<LivepeerConfig client={clientStudio} theme={theme}>
+							<Layout>
+								<Component {...pageProps} />
+							</Layout>
+						</LivepeerConfig>
+					</ThemeProvider>
                 </RainbowKitProvider>
             </SessionProvider>
         </WagmiConfig>
