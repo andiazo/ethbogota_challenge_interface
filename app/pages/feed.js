@@ -10,13 +10,11 @@ export default function Feed(props) {
   const [data, setData] = useState()
 
   const getData = useCallback(async (track) => {
-    const dataTrack = [{"track": track,  "playbackId": "87b5b3urybkhinp5"}, {"track": track,  "playbackId": "87b5b3urybkhinp5"}]
     fetch('/api/tracks?id='+track)
       .then((res) => res.json())
       .then((data) => {
         if(data)
           setData(data)
-          console.log("> data:", data)
       })
   }, [track]);
   const [id, setId] = useState(0)

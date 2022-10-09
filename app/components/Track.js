@@ -7,9 +7,7 @@ import { Player } from '@livepeer/react';
 import styles from '../styles/Home.module.css';
 
 export default function Track({ data }) {
-	console.log('data:', data);
 	// if (true) return <div></div>
-
 	return (
 		<>
 			<Fragment>
@@ -20,6 +18,9 @@ export default function Track({ data }) {
 			{data.data && data.data.length > 0 ? (
 				data.data.map((datum) => (
 					<div key={datum.id} className={styles.videocard}>
+						<Typography variant="h2" color="blue-gray">
+							{datum.title}
+						</Typography>
 						<Player
 							title="Waterfalls"
 							playbackId={datum.playbackId}
@@ -42,12 +43,26 @@ export default function Track({ data }) {
 							}}
 							objectFit="cover"
 							className={styles.videocard}
-							style={{'z-index':0}}
+							style={{ 'z-index': 0 }}
 						/>
 					</div>
 				))
 			) : (
 				<div>Pronto haremos más contenido para ti</div>
+			)}
+			{data.activity ? (
+				<div>
+					<Typography variant="h1" color="blue-gray">
+						Actividad
+					</Typography>
+					<Typography>
+						{data.activity}
+					</Typography>
+				</div>
+			) : (
+				<div>
+					No tienes actividades
+				</div>
 			)}
 		</>
 	);
