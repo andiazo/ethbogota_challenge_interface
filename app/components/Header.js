@@ -63,7 +63,7 @@ export default function Header() {
 					variant="small"
 					className="mr-4 cursor-pointer py-1.5 font-normal"
 				>
-					<span>ABCCrypto</span>
+					<span>1-2Web3</span>
 				</Typography>
 				<div className="hidden lg:block">{navList}</div>
 				<SignIn />

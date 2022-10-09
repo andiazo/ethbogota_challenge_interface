@@ -103,39 +103,9 @@ export default function Home() {
 					</Link>
 				</div>
 			</main>
-
-			<footer className={styles.footer}>
+			
+			<footer >
 				
-        <div className="container p-6 text-gray-800">
-          <div className="grid lg:grid-cols-2 gap-4">
-            <div className="mb-6 md:mb-0">
-              <h5 className="font-medium mb-2 uppercase">Footer text</h5>
-              <p className="mb-4">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste atque ea quis
-                molestias. Fugiat pariatur maxime quis culpa corporis vitae repudiandae
-                aliquam voluptatem veniam, est atque cumque eum delectus sint!
-              </p>
-            </div>
-            <div className="mb-6 md:mb-0">
-              <h5 className="font-medium mb-2 uppercase">Footer text</h5>
-              <p className="mb-4">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste atque ea quis
-                molestias. Fugiat pariatur maxime quis culpa corporis vitae repudiandae
-                aliquam voluptatem veniam, est atque cumque eum delectus sint!
-              </p>
-            </div>
-          </div>
-        </div>
-        <div className="text-center text-gray-700 p-4" style={{backgroundColor: 'rgba(0, 0, 0, 0.2)'}}>
-		<a
-					href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-					target="_blank"
-					rel="noopener noreferrer"
-				>
-					For our ETHGlobal @ ETHbogota community
-				
-				</a>
-        </div>
 			</footer>
 		</div>
 	);
