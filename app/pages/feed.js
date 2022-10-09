@@ -4,7 +4,7 @@ import { useRouter } from 'next/router'
 import { useCallback, useEffect, useState } from "react";
 import Track from "../components/Track";
 
-export default function index(props) {
+export default function Feed(props) {
 
   const router = useRouter()
   const { track } = router.query
