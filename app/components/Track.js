@@ -17,13 +17,13 @@ export default function Track({ data }) {
 					{data.title}
 				</Typography>
 			</Fragment>
-			{data.data ? (
+			{data.data && data.data.length > 0 ? (
 				data.data.map((datum) => (
 					<div key={datum.id} className={styles.videocard}>
 						<Player
 							title="Waterfalls"
 							playbackId={datum.playbackId}
-							autoPlay
+							autoPlay={false}
 							muted
 							showTitle={false}
 							aspectRatio="16to9"
@@ -42,11 +42,12 @@ export default function Track({ data }) {
 							}}
 							objectFit="cover"
 							className={styles.videocard}
+							style={{'z-index':0}}
 						/>
 					</div>
 				))
 			) : (
-				<div>Sin datos por el momento</div>
+				<div>Pronto haremos más contenido para ti</div>
 			)}
 		</>
 	);

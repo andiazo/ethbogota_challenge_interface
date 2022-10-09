@@ -20,7 +20,7 @@ export default function Team() {
 					<Link href="/team">
 						<div className={styles.card}>
 							<h2>Andres Diaz</h2>
-							<p>Find in-depth information about Next.js features and API.</p>
+							<p>Fullstack Blockchain Dev.</p>
 						</div>
 					</Link>
 

@@ -27,7 +27,7 @@ export default function Footer() {
   </div>
   <div className="text-center text-gray-700 p-4" style={{backgroundColor: 'rgba(0, 0, 0, 0.2)'}}>
     <a
-      href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
+      href="https://ethglobal.com/showcase"
       target="_blank"
       rel="noopener noreferrer"
     >

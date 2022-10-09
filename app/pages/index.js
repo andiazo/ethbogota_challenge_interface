@@ -57,8 +57,8 @@ export default function Home() {
 							</p>
 						</div>
 					</Link>
-
-					<a href="https://nextjs.org/learn" className={styles.card}>
+					<Link href="/feed?track=1">
+						<div className={styles.card}>
 						<h2>Web3 Intermedio &rarr;</h2>
 						<p className={styles.textOverflow}>
 							Estudiaremos el trilema de la blockchain (escalabilidad, seguridad
@@ -67,23 +67,19 @@ export default function Home() {
 							primera cartera cripto, reconocerás la importancia de la frase
 							semilla. Abordaremos los NFT y su importancia.
 						</p>
-					</a>
-
-					<a
-						href="https://github.com/vercel/next.js/tree/canary/examples"
-						className={styles.card}
-					>
+						</div>
+					</Link>
+					<Link href="/feed?track=2">
+						<div className={styles.card}>
 						<h2>Web3 Avanzado &rarr;</h2>
 						<p className={styles.textOverflow}>
 							Realizarás tus primeras transacciones con la cartera cripo.
 							Conocerás el mercado P2B Y P2P y podrás mintear tu primer NFT.
 						</p>
-					</a>
-
-					<a
-						href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-						className={styles.card}
-					>
+						</div>
+					</Link>
+					<Link href="/feed?track=3">
+						<div className={styles.card}>
 						<h2>Web3 Experto &rarr;</h2>
 						<p className={styles.textOverflow}>
 							Aprenderás sobre los intangibles, entenderás por qué tienen valor
@@ -91,7 +87,8 @@ export default function Home() {
 							intercambio de valor. Conocerás la historia de la blockchain y los
 							criptoactivos.
 						</p>
-					</a>
+						</div>
+					</Link>
 					<Link href="/team">
 						<div className={styles.card}>
 							<h2>Equipo &rarr;</h2>
