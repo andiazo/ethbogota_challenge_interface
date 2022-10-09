@@ -19,8 +19,8 @@ export default function Footer() {
       <div className="mb-6 md:mb-0">
         <h5 className="font-medium mb-2 uppercase">Follow us!</h5>
         <p className="mb-4">
-        If you're ready to learn more about how web3 and blockchain can benefit you, we encourage you to explore our website and resources.
-         We're here to support you on your journey into Web3!.
+        If you &#39 re ready to learn more about how web3 and blockchain can benefit you, we encourage you to explore our website and resources.
+         We &#39 re here to support you on your journey into Web3!.
         </p>
       </div>
     </div>

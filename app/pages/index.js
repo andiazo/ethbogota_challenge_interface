@@ -18,7 +18,7 @@ export default function Home() {
 
 			<main className={styles.main}>
 				<h1 className={styles.title}>
-					Bienvenid@ a <a href="/">1-2Web3</a>
+					Bienvenid@ a <Link href="/">1-2Web3</Link>
 				</h1>
 				<div className={styles.videocard}>
 					<Player
